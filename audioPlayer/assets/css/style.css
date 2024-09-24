@@ -1,0 +1,171 @@
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  transition: background-image 1s ease-in-out;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px); 
+  z-index: -1; 
+}
+button{
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img{
+  height: 50px;
+  width: 50px;
+}
+
+
+.github{
+  color: black;
+}
+
+.player {
+  overflow: hidden;
+  flex-grow: 1;
+  max-width: 400px;
+  min-height: 500px;
+  box-shadow: 0px 0px 32px -6px rgba(34, 60, 80, 0.37);
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(255,190,8,1) 0%, #febb59 100%);
+  
+}
+
+.player-bottom{
+  padding: 40px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+
+.player__img-container {
+  height: 250px;
+  overflow: hidden;
+}
+.player__img-container img {
+  width: 100%;
+ 
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+}
+.controls .control-btns {
+  font-size: 30px;
+  text-align: center;
+}
+#playBtnIcon {
+  width: 50px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.controls button{
+  transition: transform 0.1s;
+  &:active{
+     transform: scale(1.2);
+  }
+}
+
+.prew, .next, .play_pause {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.play_pause img {
+  width: 50px;
+}
+
+.group {
+  margin-top: 15px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.song-name {
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+.vinil-container img{
+  width: 50px;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.composition-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-row {
+  display: flex;
+  align-items: center;
+  column-gap: 7px
+}
+
+.progress {
+  flex-grow: 1;
+}
+footer {
+  margin-top: auto;
+  padding: 20px;
+  background: linear-gradient(90deg, rgba(255,190,8,1) 0%, #febb59 100%);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  min-height: 70px;
+}
+.footer .footer__author-link {
+  display: block;
+  color: black;
+  margin-left: 30px;
+}
+.footer .school__link {
+  display: block;
+}
+.footer .school__link img {
+  display: block;
+  width: 100px;
+}
+.footer .date-creation {
+  text-align: center;
+  margin-left: auto;
+  color: #000000;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+}
