@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audio Player</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+    <title>Audio Player</title>
+  </head>
+  <body>
+    <div class="preload" style="display: none">
+      <img src="./assets/img/naruto_blue_bird.jpg" alt="" />
+      <img src="./assets/img/shikamaru_opening.jpeg" alt="" />
+      <img src="./assets/img/akatsuki_theme.jpg" alt="" />
+      <img src="./assets/img/clandestina2.jpg" alt="" />
+      <img src="./assets/img/kubi_theme.jpg" alt="" />
+      <img src="./assets/img/hope.webp" alt="" />
+    </div>
+    <div class="container">
+      <div class="player">
+        <div class="player__img-container">
+          <img
+            src="./assets/img/nikos_band_-_georgian_disco.jpg"
+            alt="song-img"
+          />
+        </div>
+        <div class="player-bottom">
+          <div class="controls">
+            <button class="prew">
+              <i class="control-btns fa-solid fa-backward-step fa-xl" title="Previous"></i>
+            </button>
+            <button id="playBtn" class="play_pause">
+              <i id="playBtnIcon" class="fa-solid fa-play fa-2xl" title="Play"></i>
+            </button>
+            <button class="next">
+              <i class="control-btns fa-solid fa-forward-step fa-xl" title="Next"></i>
+            </button>
+          </div>
+          <div class="composition-wrapper">
+            <div class="composition">
+              <div class="group"></div>
+              <div class="song-name">Composition-name</div>
+            </div>
+            <div class="vinil-container">
+              <img src="./assets/img/control-icons/disc1.png" alt="" />
+            </div>
+          </div>
+
+          <div class="bottom-row">
+            <div class="current-time">0:00</div>
+            <input
+              class="progress"
+              type="range"
+              min="0"
+              step="1"
+              value="0"
+              name=""
+              id=""
+            />
+            <div class="song-duration"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <a
+            href="https://rs.school/courses/javascript-ru"
+            class="school__link"
+          >
+            <img src="./assets/img/rs-school-logo.svg" alt="RSSchool link"
+          /></a>
+          <a href="https://github.com/zhanybekzh" class="footer__author-link">
+            <i class="fa-brands fa-github fa-2xl"></i>
+          </a>
+          <div class="date-creation">2024</div>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
